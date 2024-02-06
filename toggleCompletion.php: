@@ -1,0 +1,11 @@
+<?php
+    session_start();
+
+    $index = $_GET['index'];
+
+    if (isset($_SESSION['completed'][$index])) {
+        unset($_SESSION['completed'][$index]);
+    } else {
+	$_SESSION['completed'][$index] = true;
+    }
+?>
