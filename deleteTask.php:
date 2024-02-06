@@ -1,0 +1,8 @@
+<?php
+    session_start();
+
+    $index = $_GET['index'];
+
+    unset($_SESSION['tasks'][$index]);
+    unset($_SESSION['completed'][$index]);
+?>
